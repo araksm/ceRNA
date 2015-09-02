@@ -32,6 +32,7 @@ To run the program
     *MC_eq:		number of Monte-Carlo steps to equilibrate the system
 
 
+
 **2. make sure that you have g++ compiler **
 
 **3. run the bash script *bash.sh* **
