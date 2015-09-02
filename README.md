@@ -1,6 +1,7 @@
 To run the program
 
-**1. fill-up parameter values in the file *parameters* as follows
+1. fill-up parameter values in the file "parameters" as follows
+
 
     *b1:            ceRNA_1 synthesis rate 
     *b2:            ceRNA_2 synthesis rate
@@ -33,7 +34,8 @@ To run the program
 
 
 
-**2. make sure that you have g++ compiler
+2. make sure that you have g++ compiler
 
-**3. run the bash script *bash.sh*
+
+3. run the bash script "bash.sh"
 
