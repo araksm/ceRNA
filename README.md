@@ -28,7 +28,7 @@ To run the program
     *m2min:         minimum size of the target population
     *m2max:         maximum size of the target population
     *channel:       assign 1 for the miRNA-channel and 2 for the TF-channel
-    *step:          advancement of TF concentrations 
+    *step:          advancement of input TF
     *MC_steps:      number of Monte-Carlo steps
     *MC_eq:         number of Monte-Carlo steps to equilibrate the system
 
