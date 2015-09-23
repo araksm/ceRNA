@@ -17,7 +17,7 @@ float cycles = 500;
 
 
 inline float log2mine(const float x){
-	if(x>0)
+    if(x>0)
         return  log(x) / log(2);
     else
         return 0;
@@ -121,17 +121,17 @@ float calculateOptInf(float lim, int oneortwo, char * meanfilename){
     
     inf2 /= sqrt(2* M_PI*exp(1));
     inf2 = log2mine(inf2);
-
     
-  // theoretical prediction
-  //  if(oneortwo == 2){
-   //     if(inf2> 0){
-         //   printf("optinf2 : %f \t", inf2);
-   ////     }
+    
+    // theoretical prediction
+    //  if(oneortwo == 2){
+    //     if(inf2> 0){
+    //   printf("optinf2 : %f \t", inf2);
+    ////     }
     //    else{
-         //   printf("optinf2 : %f \t", 0.0);
+    //   printf("optinf2 : %f \t", 0.0);
     //    }
-   // }
+    // }
     
     fclose(pFile);
     fclose(pFile1);
@@ -204,14 +204,14 @@ float calculateInf2(long m1min, long m1max, long m2min, long m2max,   float varm
     
     if (pFile != NULL){
         
-     //   printf("kuku%i\t", var<varmax );
+        //   printf("kuku%i\t", var<varmax );
         while (fgetc(pFile) != EOF && var<varmax)
         {
             
             fscanf(pFile, "%s\t%f\t%li\t%li\t%li\t%li\t%li\t%f\n", s, &timeMu, &m1, &m2, &mu, &c1, &c2, &var);
             
-        //    printf("\t%li\n", m2 );
-
+            //    printf("\t%li\n", m2 );
+            
             
             for(p = 0; p <= breaksM2; p++ ) {
                 
@@ -275,7 +275,7 @@ float calculateInf2(long m1min, long m1max, long m2min, long m2max,   float varm
     }
     
     
-      
+    
     
     if(inf2> 0)
     {

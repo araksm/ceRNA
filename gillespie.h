@@ -64,8 +64,8 @@ int gillespie ( float * params, int write, FILE * pFile, FILE* myAvfile){
     m2min = params[22];
     m2max = params[23];
     channel = params[24];
-
-    fvar = params[26];
+    
+    fvar = params[28];
     
     init_genrand64(7266447313870364031); // initializing random number generator
     
@@ -86,7 +86,7 @@ int gillespie ( float * params, int write, FILE * pFile, FILE* myAvfile){
     float epsilon = DBL_EPSILON + 0.000000001;
     int stop = 0, i = 0;
     float  a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a19, a20, omega;
-
+    
     float nmu0 = 1;
     float nm10 = 1;
     float nm20 = 1;
@@ -180,7 +180,7 @@ int gillespie ( float * params, int write, FILE * pFile, FILE* myAvfile){
         }
         // ceRNA2
         else if (  r1   <= a1 + a2 + a3 + a4 + a5 ) {
-          
+            
             m2 ++ ;
             
         }
@@ -192,7 +192,7 @@ int gillespie ( float * params, int write, FILE * pFile, FILE* myAvfile){
         }
         // binding
         else if (   r1   <= a1 + a2 + a3 + a4 + a5 + a6 + a7){
-           
+            
             m2 -- ;
             mu -- ;
             c2 ++ ;
@@ -305,19 +305,19 @@ int gillespie ( float * params, int write, FILE * pFile, FILE* myAvfile){
         
         
         fprintf( myAvfile, "state:\t%f\t%f\t%f\t%f\t%f\t%f\t%f\t%f\t%f\n", meanM1, varianceM1, meanM2, varianceM2, meanMu, varianceMu, meanC1, meanC2, fvar);
-    
+        
         // calculating m2min, variancem2 (m2min) and m2max
         if(meanM2 < minbound) {
             minVariance2 = varianceM2;
             minbound = meanM2;
         };
-            if(meanM2 > maxbound) maxbound = meanM2;
+        if(meanM2 > maxbound) maxbound = meanM2;
         
         
     }
     
     
-
+    
     return 0;
     
     
